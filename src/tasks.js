@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Task from './task';
 
 class Tasks extends React.Component {
 	state = {
@@ -50,7 +51,7 @@ class Tasks extends React.Component {
 				<button onClick={this.addTask}>Add New Task</button>
 				<ul>
 					{this.state.posts.map((post) => {
-						return <li key={post.id}>{post.email}</li>;
+						return <Task post={post} />;
 					})}
 				</ul>
 			</div>
